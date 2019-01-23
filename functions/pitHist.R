@@ -16,9 +16,9 @@ pitHist <- function(data, start.date, nowcast.dates, days.back, f.priordelay,
   # Value
   # Object of class "histogram". See help(hist)
   
-  # Require packages
-  require(surveillance)
-  require(parallel)
+  # Load packages
+  library(surveillance)
+  library(parallel)
   
   # Make list with observed counts N and predictive ecdf's F
   # Do this in parallel
