@@ -3,10 +3,10 @@
 #
 
 # Load packages
-library(tidyverse)
 library(Matrix)
 library(scales)
 library(gridExtra)
+library(tidyverse)
 library(RColorBrewer)
 
 # Set time locale to English for English day and month names
