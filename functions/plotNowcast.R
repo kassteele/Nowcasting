@@ -4,7 +4,7 @@ plotNowcast <- function(data, nowcast, title = "Nowcast") {
   # Plot nowcast
   #
   # Arguments
-  # data     Dataframe, output from dataSetupt
+  # data     Dataframe, output from dataSetup
   # nowcast  List, output from nowcast
   # title    Title of the plot
   #
