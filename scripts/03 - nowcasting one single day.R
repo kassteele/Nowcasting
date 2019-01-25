@@ -59,7 +59,7 @@ rep.data <- dataSetup(
   data         = epi.data,
   start.date   = as.Date("2013-05-01"), # Starting date of outbreak
   end.date     = as.Date("2013-09-15"), # Ending date of outbreak (in real-time, leave NULL so end.date = nowcast.date)
-  nowcast.date = as.Date("2013-09-01"), # Nowcast date
+  nowcast.date = as.Date("2013-08-10"), # Nowcast date
   days.back    = 2*42,                  # Number of days back from nowcast.date to include in estimation procedure
   f.priordelay = f.priordelay)          # Prior reporting delay PMF
 
@@ -73,9 +73,6 @@ model.setup <- modelSetup(
 #
 # Nowcasting ----
 #
-
-# Doen voor 10 juni, 10 juli en 10 augustus
-# ord 1 en 2
 
 # Nowcast
 nowcast.list <- nowcast(
