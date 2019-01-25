@@ -20,7 +20,7 @@ plotNowcast <- function(data, nowcast, title = "Nowcast") {
           labels = c("Reported", "Not yet reported", "Nowcast"))) %>% 
     group_by(Date, Reported) %>%
     summarize(Cases = sum(Cases))
-  tmp2 <- nowcast.list$nowcast %>% 
+  tmp2 <- nowcast$nowcast %>% 
     filter(
       Date %in% ((
         data %>%
