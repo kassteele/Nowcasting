@@ -1,4 +1,4 @@
-plotNowcast <- function(data, nowcast, title = "Nowcast", ylim = NULL) {
+plotNowcast <- function(data, nowcast, title = "Nowcast") {
   #
   # Descrition
   # Plot nowcast
@@ -28,9 +28,6 @@ plotNowcast <- function(data, nowcast, title = "Nowcast", ylim = NULL) {
           unique %>%
           sort))
   
-  # Set ylimits
-  if (is.null(ylim)) ylim <- c(0, max(tmp1$Cases) + 1)
-  
   # Make the plot
   plot <- ggplot(
     data = tmp1,
@@ -59,7 +56,7 @@ plotNowcast <- function(data, nowcast, title = "Nowcast", ylim = NULL) {
       date_labels = "%b %d",
       expand = c(0, 0)) +
     scale_y_continuous(
-      limits = ylim,
+      limits = c(0, 41),
       expand = c(0, 0),
       oob = squish) +
     labs(
