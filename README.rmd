@@ -1,8 +1,10 @@
 ---
-title: owcasting the number of new symptomatic cases during infectious disease outbreaks
-  using constrained P-spline smoothing
+title: Nowcasting the number of new symptomatic cases during infectious disease outbreaks using constrained P-spline smoothing
 author: "Jan van de Kassteele"
-output: html_document
+output:
+  github_document:
+    toc: true
+    html_preview: false
 ---
 
 ```{r setup, include=FALSE}
