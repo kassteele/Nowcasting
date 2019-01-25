@@ -134,13 +134,6 @@ pit.data %>%
   group_by(ord, phase) %>% 
   summarize(mad = mean(mad) %>% round(digits = 2))
 
-# 1 1st order differences Growth phase, June 2013     0.84
-# 2 1st order differences Peak phase, July 2013       0.87
-# 3 1st order differences Decline phase, August 2013  0.72
-# 4 2nd order differences Growth phase, June 2013     0.7 
-# 5 2nd order differences Peak phase, July 2013       0.23
-# 6 2nd order differences Decline phase, August 2013  0.62
-
 #
 # Plot ----
 #
