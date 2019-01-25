@@ -30,9 +30,9 @@ f.priordelay <- genPriorDelayDist(mean.delay = 12, max.delay = 49, p = 0.99)
 rep.data <- dataSetup(
   data         = epi.data,
   start.date   = as.Date("2013-05-01"), # Starting date of outbreak
-  end.date     = as.Date("2013-11-01"), # Ending date of outbreak (in real-time, leave NULL so end.date = nowcast.date)
+  end.date     = as.Date("2013-09-15"), # Ending date of outbreak (in real-time, leave NULL so end.date = nowcast.date)
   nowcast.date = as.Date("2013-08-10"), # Nowcast date
-  days.back    = 2*49,                  # Number of days back from nowcast.date to include in estimation procedure
+  days.back    = 2*42,                  # Number of days back from nowcast.date to include in estimation procedure
   f.priordelay = f.priordelay)          # Prior delay PMF
 
 # Model setup
