@@ -56,7 +56,7 @@ plotNowcast <- function(data, nowcast, title = "Nowcast") {
       date_labels = "%b %d",
       expand = c(0, 0)) +
     scale_y_continuous(
-      limits = c(0, 41),
+      limits = c(0, with(data, max(tapply(Cases, Date, sum)) + 1)),
       expand = c(0, 0),
       oob = squish) +
     labs(
