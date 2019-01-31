@@ -114,14 +114,12 @@ head(epi.data)
 6 2013-05-20  2013-05-28
 ```
 
-### Model setup
+### Prior delay distribution
 
 Here we are specifying a prior reporting delay distribution, set the
 starting date, ending date and nowcast date. We then pre-process the
 data (i.e. create the reporting trapezoid) and set the nowcasting model
 parameters.
-
-#### Prior delay distribution
 
 The prior delay distribution is a vector with a probability mass for
 each delay (in days). The vector should add up to one. We use the
@@ -160,7 +158,7 @@ Note that we implicity assume that at the starting date only one case is
 expected. If you expect more cases, say 20, then multiply `f.priordelay`
 with this number. `f.priordelay` should then add up to 20.
 
-#### Data setup
+### Data setup
 
 In this step we create a dataframe with the number of cross-tabulated
 cases and many other
@@ -243,7 +241,7 @@ cases on August 10, 2013, and the days before, until 42 days back. For
 this, we need to extrapolate the reported cases in the blue trapezoid
 into the orange triangle.
 
-#### Model setup
+### Model setup
 
 We use a statistical model based on P-spline smoothing. P-splines
 provide a flexible way of smoothing data, i.e. curve fitting,, and
@@ -273,7 +271,7 @@ model.setup <- modelSetup(
   kappa = list(u = 1e6, b = 1e6, w = 0.01, s = 1e-6))
 ```
 
-#### Nowcast
+### Nowcast
 
 The last step is the nowcast. For this we use the `nowcast` function and
 here all the magic happens. A surface is fitted to the reported counts,
@@ -332,7 +330,7 @@ interval.
 We can see the model does quite a good job, even no cases have been
 reported near August 10.
 
-#### Time varying reporing delay distribution
+### Time varying reporing delay distribution
 
 One last thing is the visualize the smooth estimate of the reporing
 delay distribution. For this we use the `plotDelayDist`
@@ -346,7 +344,7 @@ plotDelayDist(data = rep.data, nowcast = nowcast.list, title = "Reporting delay 
 
 This conlcudes our worked example.
 
-### Other things
+## Other things
 
 Other things you might want to try is generating a series of nowcasts,
 e.g. as an animation. Furthermore, you might want to investigate how
