@@ -12,7 +12,6 @@
 # Load packages
 library(Matrix)
 library(scales)
-library(gridExtra)
 library(tidyverse)
 library(RColorBrewer)
 
