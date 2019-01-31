@@ -95,7 +95,7 @@ nowcast.list$nowcast
 
 # Epicurve and reporting trapezium
 (epicurve.plot <- plotEpicurve(data = rep.data, title = "Measles outbreak NL 2013-2014"))
-(trapezium.plot <- plotTrapezium(data = rep.data, title = "Reporting trapezium"))
+(trapezoid.plot <- plotTrapezoid(data = rep.data, title = "Reporting trapezoid"))
 
 # Nowcast and time-varying reporting delay distribution
 (nowcast.plot <- plotNowcast(data = rep.data, nowcast = nowcast.list, title = "Nowcast"))
@@ -103,6 +103,6 @@ nowcast.list$nowcast
 
 # Save plots
 ggsave(file = "documents/paper/fig_epicurve.png", plot = epicurve.plot, width = 16, height = 9, units = "cm", dpi = 300)
-ggsave(file = "documents/paper/fig_trapezium.png", plot = trapezium.plot, width = 16, height = 6.5, units = "cm", dpi = 300)
+ggsave(file = "documents/paper/fig_trapezoid.png", plot = trapezoid.plot, width = 16, height = 6.5, units = "cm", dpi = 300)
 ggsave(file = "documents/paper/fig_nowcast.png", plot = nowcast.plot, width = 16, height = 9, units = "cm", dpi = 300)
 ggsave(file = "documents/paper/fig_delaydist.png", plot = delaydist.plot, width = 16, height = 6.5, units = "cm", dpi = 300)
