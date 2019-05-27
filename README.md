@@ -8,8 +8,8 @@ Jan van de Kassteele, Paul Eilers, Jacco Wallinga
 Here you can download R code and example data to reproduce the results
 from the paper **Nowcasting the number of new symptomatic cases during
 infectious disease outbreaks using constrained P-spline smoothing** by
-Jan van de Kassteele, Paul Eilers and Jacco Wallinga. The paper is
-currently under review for
+Jan van de Kassteele, Paul Eilers and Jacco Wallinga. The paper has been 
+accepted for publication in
 [Epidemiology](https://journals.lww.com/epidem/pages/default.aspx).
 
 Below is a worked example. We produce a nowcast for Augst 10, 2013, just
